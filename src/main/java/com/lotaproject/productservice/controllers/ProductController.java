@@ -1,10 +1,18 @@
 package com.lotaproject.productservice.controllers;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.lotaproject.productservice.dto.CreateProductRequest;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/product")
+@RequestMapping("/api/products")
 public class ProductController {
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public void  createProduct(@RequestBody CreateProductRequest createProductRequest){
+
+
+    }
 
 }
